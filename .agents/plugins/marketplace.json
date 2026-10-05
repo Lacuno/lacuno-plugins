@@ -1,0 +1,20 @@
+{
+  "name": "lacuno",
+  "interface": {
+    "displayName": "Lacuno"
+  },
+  "plugins": [
+    {
+      "name": "lacuno",
+      "source": {
+        "source": "local",
+        "path": "./lacuno"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

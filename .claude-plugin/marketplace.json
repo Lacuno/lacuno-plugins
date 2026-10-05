@@ -1,0 +1,16 @@
+{
+  "name": "lacuno",
+  "description": "Lacuno for Claude: design, build and publish websites in Lacuno from your AI app",
+  "owner": {
+    "name": "Lacuno",
+    "url": "https://lacuno.io"
+  },
+  "plugins": [
+    {
+      "name": "lacuno",
+      "source": "./lacuno",
+      "description": "Connects Lacuno Cloud and adds skills for building pages, checking your work, content and forms",
+      "category": "design"
+    }
+  ]
+}
