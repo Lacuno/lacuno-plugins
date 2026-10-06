@@ -40,7 +40,8 @@ A batch is atomic and validated.
 
 ## Style the Lacuno way
 
-- Style through classes, per breakpoint and state, with `style.set`. Reuse existing classes and
+- Style through classes, per breakpoint and state, with `style.set` (leave out `breakpoint` and
+  `state` for a plain style: base and none). Reuse existing classes and
   tokens before adding new ones.
 - Use design tokens for colours, spacing, radii and fonts so the site stays consistent.
 - Link to pages with a `page` binding, not a hard-coded path, so links survive a rename.

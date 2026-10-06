@@ -24,7 +24,8 @@ After each large batch:
    phone width too (390). Pass `node` to crop to one element, `height` for just the first
    screen. Screenshots are not available on every server; if the tool is missing or fails, rely
    on the outline and the preview text and do not try other ways.
-4. **Styles:** `styles.get` with a class shows its declarations per breakpoint and state, when
+4. **Styles:** `styles.get` with a class, a list of classes or a `node` (all classes in that
+   subtree, in one call) shows the declarations per breakpoint and state, when
    something looks wrong and you need to know why.
 5. Fix everything you found in one batch, then check once more.
 
