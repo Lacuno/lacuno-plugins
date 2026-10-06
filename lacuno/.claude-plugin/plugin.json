@@ -1,7 +1,7 @@
 {
   "name": "lacuno",
   "displayName": "Lacuno",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Design, build and publish websites in Lacuno: connects Lacuno Cloud and adds skills for building pages, checking your work, content and forms",
   "author": {
     "name": "Lacuno",
@@ -10,5 +10,16 @@
   "homepage": "https://lacuno.io",
   "repository": "https://github.com/Lacuno/lacuno-plugins",
   "license": "MIT",
-  "keywords": ["lacuno", "website", "web-design", "cms", "mcp"]
+  "keywords": [
+    "lacuno",
+    "website",
+    "web-design",
+    "cms",
+    "mcp"
+  ],
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://github.com/Lacuno/lacuno-plugins#readme",
+  "supportUrl": "https://discord.gg/gQdRjKf3S",
+  "privacyPolicyUrl": "https://lacuno.io/privacy",
+  "termsOfServiceUrl": "https://lacuno.io/terms"
 }

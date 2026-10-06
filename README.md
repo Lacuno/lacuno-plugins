@@ -77,6 +77,12 @@ lacuno/
   skills/                           the skills, one folder each
 ```
 
+## Support and privacy
+
+Questions and problems: the [Lacuno Discord](https://discord.gg/gQdRjKf3S). What Lacuno does with your
+data: the [Privacy Policy](https://lacuno.io/privacy); use of Lacuno Cloud: the
+[Terms](https://lacuno.io/terms).
+
 ## License
 
 MIT, see [LICENSE](LICENSE).

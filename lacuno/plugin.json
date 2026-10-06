@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lacuno",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Design, build and publish websites in Lacuno: connects Lacuno Cloud and adds skills for building pages, checking your work, content and forms",
   "author": {
     "name": "Lacuno",
@@ -10,15 +10,37 @@
   "homepage": "https://lacuno.io",
   "repository": "https://github.com/Lacuno/lacuno-plugins",
   "license": "MIT",
-  "keywords": ["lacuno", "website", "web-design", "cms", "mcp"],
+  "keywords": [
+    "lacuno",
+    "website",
+    "web-design",
+    "cms",
+    "mcp"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Lacuno",
-        "shortDescription": "Design, build and publish websites in Lacuno",
+        "shortDescription": "Build websites with your AI",
+        "longDescription": "Lacuno is a visual website builder that your AI works in directly. Connect your Lacuno account, and your AI can read and change the pages, styles, content and forms of every site you own or edit, while you watch each change arrive live on the editor canvas. It checks its work with previews and screenshots, and publishes when you ask. The included skills teach it to build a page from a brief, mockup or screenshot in a few large steps, to check its work in Lacuno itself, and to manage CMS collections and contact forms. Sites publish as fast static HTML on Lacuno Cloud, hosted in Germany.",
         "developerName": "Lacuno",
         "category": "Productivity",
-        "websiteURL": "https://lacuno.io"
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://lacuno.io",
+        "supportURL": "https://discord.gg/gQdRjKf3S",
+        "privacyPolicyURL": "https://lacuno.io/privacy",
+        "termsOfServiceURL": "https://lacuno.io/terms",
+        "defaultPrompt": [
+          "List my Lacuno sites",
+          "Build a landing page on my Lacuno site from this brief",
+          "Add a contact form to my home page"
+        ],
+        "brandColor": "#7047EB",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
       }
     }
   }
