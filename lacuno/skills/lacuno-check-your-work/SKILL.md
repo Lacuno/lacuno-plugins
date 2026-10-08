@@ -20,10 +20,12 @@ After each large batch:
    Read it for typos, missing copy, wrong order and leftover placeholder text. Use the node ids
    to fix things directly. Without `text` it returns the published HTML; read that only when you
    need to check markup such as attributes or links.
-3. **Look:** `page.screenshot` returns a PNG of the first screen at a width (default 1280).
-   Check a phone width too (390). For anything below the first screen, pass `node` to capture
-   that section: a `fullPage` shot of a long page is shrunk until its text is unreadable. Screenshots are not available on every server; if the tool is missing or fails, rely
-   on the outline and the preview text and do not try other ways.
+3. **Look:** `page.screenshot` returns a JPEG of the first screen at a width (default 1280),
+   with the page's images at the size they show. Check a phone width too (390). For anything
+   below the first screen, pass `node` to capture that section as a PNG: a `fullPage` shot is
+   cut at 4,000 px and shrunk until its text is unreadable. Screenshots are not available on
+   every server; if the tool is missing or fails, rely on the outline and the preview text and
+   do not try other ways.
 4. **Styles:** `styles.get` with a class, a list of classes or a `node` (all classes in that
    subtree, in one call) shows the declarations per breakpoint and state, when
    something looks wrong and you need to know why.
