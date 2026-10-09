@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lacuno",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Design, build and publish websites in Lacuno: connects Lacuno Cloud and adds skills for building pages, checking your work, content and forms",
   "author": {
     "name": "Lacuno",
