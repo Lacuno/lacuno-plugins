@@ -48,6 +48,12 @@ A batch is atomic and validated.
 - Images: `asset.import` with a public https `url`, or `asset.upload` for a file on the user's
   machine (PUT it with `curl -T`). Never send image bytes as base64 unless they are tiny.
 - Repeated pieces (cards, nav items) belong in a component or a collection list.
+- A mobile menu needs no script: a `button` with `popovertarget` set to the `id` of a `nav`
+  with `popover` (`auto`) that holds the links. On Desktop the button is `display: none` and the
+  nav shows inline, with the popover box undone (`display: block`, `position: static`,
+  `inset: auto`, `margin: 0`, `padding: 0`, `border: 0`, transparent background). From Tablet
+  down the button shows and the nav takes `display: revert`, so the browser hides it until the
+  button opens it, styled as a fixed side panel.
 
 ## Pitfalls
 
