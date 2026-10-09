@@ -73,10 +73,12 @@ The person does these steps; you cannot. Once Lacuno is listed in the Claude con
 directory and in ChatGPT's apps, they open the listing, press Connect and sign in; until then,
 tell them:
 
-- claude.ai: in Customize → Connectors (claude.ai/customize/connectors) choose *Add custom
-  connector*, paste `https://mcp.lacuno.io/mcp` and sign in. On Team and Enterprise an owner adds
-  it under Organization settings → Connectors.
-- Claude Desktop: Settings → Connectors, *Add custom connector*, the same address.
+- claude.ai and Claude Desktop: open
+  `https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Lacuno&connectorUrl=https%3A%2F%2Fmcp.lacuno.io%2Fmcp`,
+  which fills in the connector; confirm it and sign in. Claude Desktop takes the same connectors.
+  By hand: in Customize → Connectors (claude.ai/customize/connectors) or Claude Desktop's
+  Settings → Connectors choose *Add custom connector*, paste `https://mcp.lacuno.io/mcp` and sign
+  in. On Team and Enterprise an owner adds it under Organization settings → Connectors.
 - ChatGPT: turn on Settings → Security and login → Developer mode, then at chatgpt.com/plugins
   choose + and paste the address.
 

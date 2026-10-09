@@ -38,10 +38,13 @@ Then run `/mcp` in a session, pick `lacuno` and sign in.
 
 **claude.ai and Claude Desktop**
 
-In Customize → Connectors (claude.ai/customize/connectors) or in Claude Desktop's Settings →
-Connectors, choose *Add custom connector* and paste `https://mcp.lacuno.io/mcp`. On Team and
-Enterprise, an owner adds it in Organization settings → Connectors. Once Lacuno is listed in
-Anthropic's directory, you can add it there in one click, skills included.
+Open [this link](https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Lacuno&connectorUrl=https%3A%2F%2Fmcp.lacuno.io%2Fmcp),
+which fills in the connector on claude.ai; confirm it and sign in. Claude Desktop takes the same
+connectors. By hand: in Customize → Connectors (claude.ai/customize/connectors) or in Claude
+Desktop's Settings → Connectors, choose *Add custom connector* and paste
+`https://mcp.lacuno.io/mcp`. On Team and Enterprise, an owner adds it in Organization settings →
+Connectors. Once Lacuno is listed in Anthropic's directory, you can add it there in one click,
+skills included.
 
 **Codex**
 
