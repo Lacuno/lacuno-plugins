@@ -16,6 +16,17 @@ editor and names the site on each call.
 
 ## Install
 
+**With your AI app**
+
+Paste this into Claude Code, Codex, Cursor or any AI app with a terminal; it installs the plugin
+or the MCP server for that app and gets you signed in:
+
+```
+Set up Lacuno by following the guide at https://lacuno.io/install.md
+```
+
+The guide is [install.md](install.md) in this repository. The steps below are the same by hand.
+
 **Claude Code**
 
 ```
