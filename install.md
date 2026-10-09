@@ -69,7 +69,9 @@ its MCP settings). Then step 6.
 
 ## 5. Without a shell
 
-The person does these steps; you cannot. Tell them:
+The person does these steps; you cannot. Once Lacuno is listed in the Claude connector
+directory and in ChatGPT's apps, they open the listing, press Connect and sign in; until then,
+tell them:
 
 - claude.ai: in Customize → Connectors (claude.ai/customize/connectors) choose *Add custom
   connector*, paste `https://mcp.lacuno.io/mcp` and sign in. On Team and Enterprise an owner adds
