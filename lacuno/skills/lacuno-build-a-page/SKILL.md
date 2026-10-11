@@ -5,6 +5,6 @@ description: Build or redesign a page or section on a Lacuno site from a brief, 
 
 # Build a page in Lacuno
 
-The Lacuno server explains how. Call `guide`, then `guide` with the topics `build` and `looks` (and `menu`, `content` or `forms` when the page needs one). Follow them. Then check: `guide` topic `check`.
+The Lacuno server explains how. Call `guide`, then `guide` with the topics `build` and `looks` (and `menu`, `content` or `forms` when the page needs one, `motion` when it should move). Follow them. Then check: `guide` topic `check`.
 
 Call `sites.list` first and pass `site` on every call (a self-hosted, per-site connection has neither).
