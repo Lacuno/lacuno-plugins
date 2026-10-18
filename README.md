@@ -75,8 +75,9 @@ in this repository work with those addresses too.
 | `lacuno-content` | Sets up CMS collections and entries and shows them on pages |
 | `lacuno-forms` | Adds contact and other forms whose messages are emailed to the site owner |
 
-The skills stay short on purpose. The detailed reference for every operation comes from the
-Lacuno server's own `guide` tool, so it always matches the version you are connected to.
+Each skill holds its own steps and rules. The Lacuno server's `guide` tool is a reference for the
+exact operation names and schemas, so those always match the version you are connected to. The
+plugin folder's [README](lacuno/README.md) lists the server's tools and which of them change a site.
 
 ## Layout
 

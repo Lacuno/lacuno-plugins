@@ -95,5 +95,5 @@ create one at https://app.lacuno.io.
 
 Say: "Lacuno is connected. I can build and edit your sites: pages, text, images, styles, content
 collections and forms, and publish when you ask. Which site shall we work on?" Then wait for the
-person. Before the first edit read `guide`; the skills say how to build pages, work with content
-and forms, and check your work.
+person. The skills say how to build pages, work with content and forms, and check your work; the
+`guide` tool is a reference for exact operation names and schemas.
