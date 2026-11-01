@@ -16,8 +16,8 @@ A Lacuno site is one JSON document: pages, a tree of nodes, classes with styles,
 ## Method
 
 1. **Plan** in this order: design tokens, then classes, then nodes.
-2. **Change with the tool of each change**, named like it: `designToken.create`, `class.create`, `style.set`, `page.create`, `node.create`, `node.update` and so on. Pass the revision you read as `expectedRevision`. Each change is all or nothing; the answer has the new revision, created ids and warnings. Use that revision for the next change; do not read the whole document again after every change. On a stale revision, read again and send again.
-3. **Build a section at a time, not an element at a time**: `node.create` takes nested children, so one call makes a whole section. `page.create` and `component.create` make only the root element (give it an `id`); fill it with `node.create`. Give your own ids (letters, digits, `-` and `_`) so later calls can use them without reading again.
+2. **Change with the tool of each kind of change**, named like it: `designToken.create`, `class.create`, `style.set`, `page.create`, `node.create`, `node.update` and so on. Each takes `changes`, a list of one or more changes of its kind, made in order and all or nothing, and the revision you read as `expectedRevision`. The answer has the new revision, the ids each change created by its index, and warnings. Use that revision for the next call; do not read the whole document again after every call. On a stale revision, read again and send again.
+3. **Few calls, one per kind and step, not one per element**: all the design tokens in one `designToken.create`, the classes in one `class.create`, a section's or page's styles in one `style.set`. `node.create` takes nested children, so one change makes a whole section and one call several sections. `page.create` and `component.create` make only the root element (give it an `id`); fill it with `node.create`. Give your own ids (letters, digits, `-` and `_`) so later calls can use them without reading again.
 4. **Check** the result as the lacuno-check-your-work skill describes, at 1280 and 390 wide, before saying the page is done.
 
 ## Rules

@@ -42,7 +42,7 @@ Change the site, but not what visitors see:
 
 | Tool | What it does |
 | --- | --- |
-| `node.create`, `style.set`, `page.update`, … | One tool per kind of change to the document, named like it: pages, elements, classes and styles, design tokens, components, collections and entries, languages. Each change is all or nothing. The ones named `….delete` or `….remove` delete; the server refuses to delete what is still in use. |
+| `node.create`, `style.set`, `page.update`, … | One tool per kind of change to the document, named like it: pages, elements, classes and styles, design tokens, components, collections and entries, languages. Each takes a list of changes of its kind, made all or nothing. The ones named `….delete` or `….remove` delete; the server refuses to delete what is still in use. |
 | `workspace.create` | Creates a workspace of yours. |
 | `site.create` | Creates a site in a workspace, from a template or as a copy of another site. |
 | `demo.save` | Creates or changes a client demo: a link that shows sites as versions to choose from. |

@@ -14,7 +14,7 @@ A collection has fields; entries hold the content. People edit them in the edito
 
 ## Method
 
-1. Make the collection with its fields in one `collection.create`, then each entry with `entry.create`, with your own ids, passing the revision you read as `expectedRevision` and then the revision from each answer.
+1. Make the collection with its fields with `collection.create`, then all its entries in one `entry.create` (a list of changes), with your own ids, passing the revision you read as `expectedRevision` and then the revision from each answer.
 2. Import images first (`asset.import` with a public https `url`, or `asset.upload`), then store the asset id in the entry.
 3. Show the entries on pages (below), then check the page as the lacuno-check-your-work skill describes.
 
