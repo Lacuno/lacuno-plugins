@@ -63,7 +63,7 @@ Motion is CSS on classes: `style.set` of these custom properties with raw values
 - `--lc-entrance` plays once when the element scrolls into view: lc-fade, lc-slide-up, lc-slide-down, lc-slide-left, lc-slide-right, lc-scale-up, lc-blur-in. `--lc-scroll` follows the scrollbar: the same names plus lc-fade-out, lc-parallax, lc-fade-through, lc-progress. Set one, not both. `--lc-duration` (400ms), `--lc-delay` and `--lc-easing` time entrances; `--lc-range` (entry, cover, exit) places scroll motion; `--lc-scroll none` on a smaller breakpoint turns it off there.
 - The page must read well at rest: reduced motion and browsers without scroll timelines show every element as styled, and screenshots show that state.
 - A scroll story: a section with attr `data-lc-story` true whose first child is the pinned stage (display grid, grid-template-rows minmax(0, max-content) auto, centred); in it the image with `--lc-scroll lc-scale-up` and `--lc-range entry`, then one child per step with `--lc-scroll lc-fade-through`. `--lc-length` on the section sets its length in screens. No overflow hidden on the section or its ancestors.
-- Custom keyframes: `keyframes.create` before the `style.set` that names them.
+- Custom keyframes: `keyframes.create` before the `style.set` that names them. Their styles are CSS text by property, such as `{"opacity":"0","translate":"0 40px"}`; a token is `var(--color-brand)`.
 
 ## Reference
 
