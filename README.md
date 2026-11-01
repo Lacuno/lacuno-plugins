@@ -70,13 +70,14 @@ in this repository work with those addresses too.
 
 | Skill | What it does |
 | --- | --- |
-| `lacuno-build-a-page` | Builds or redesigns pages from a brief, a mockup or a screenshot, in a few large batches |
+| `lacuno-build-a-page` | Builds or redesigns pages from a brief, a mockup or a screenshot, a section at a time |
 | `lacuno-check-your-work` | Checks the result with the page outline, the page's text and screenshots where available |
 | `lacuno-content` | Sets up CMS collections and entries and shows them on pages |
 | `lacuno-forms` | Adds contact and other forms whose messages are emailed to the site owner |
+| `lacuno-variants-and-demos` | Makes several versions of a site for a client and one demo link to choose from |
 
-Each skill holds its own steps and rules. The Lacuno server's `guide` tool is a reference for the
-exact operation names and schemas, so those always match the version you are connected to. The
+Each skill holds its own steps and rules. Each of the Lacuno server's tools declares its own
+fields, so those always match the version you are connected to; its `guide` tool has notes by topic. The
 plugin folder's [README](lacuno/README.md) lists the server's tools and which of them change a site.
 
 ## Layout

@@ -14,7 +14,7 @@ A collection has fields; entries hold the content. People edit them in the edito
 
 ## Method
 
-1. Make the collection, its fields and its entries in **one** `document.apply` batch, with your own ids and the revision you read as `expectedRevision`. For many entries, use a few big batches and the revision from each answer.
+1. Make the collection with its fields in one `collection.create`, then each entry with `entry.create`, with your own ids, passing the revision you read as `expectedRevision` and then the revision from each answer.
 2. Import images first (`asset.import` with a public https `url`, or `asset.upload`), then store the asset id in the entry.
 3. Show the entries on pages (below), then check the page as the lacuno-check-your-work skill describes.
 
@@ -23,8 +23,8 @@ A collection has fields; entries hold the content. People edit them in the edito
 - Field types: text, slug, richtext, number, boolean, date, image, file, color, link, option, reference, multi-reference. `slugField` gives each entry its address; slugs are unique.
 - Entry values are keyed by field id: text, slug, link and color a string; number a number; boolean true or false; date like `2026-09-28`; richtext a rich text document; image and file an asset id; option one of its values; reference an entry id; multi-reference a list of entry ids.
 - `field.update` renames without breaking bindings; `field.move` reorders.
-- Refused: a change that breaks entries (a new required field with empty values, removing an option in use). Fill the values in the same batch.
-- Refused: deleting something in use (`referencedBy`). Remove or rebind it first, in the same batch.
+- Refused: a change that breaks entries (a new required field with empty values, removing an option in use). Add a new field as optional with `field.add`, fill the entries with `entry.update`, then make it required with `field.update`.
+- Refused: deleting something in use (`referencedBy`). Remove or rebind it first.
 
 ## Showing entries
 
@@ -35,7 +35,7 @@ A collection has fields; entries hold the content. People edit them in the edito
 - Dates take `format` long, medium, numeric, short or full, and an optional `locale`.
 - An image `src` bound to an image field gets the optimised picture. An `href` bound to a slug links to that entry's page; bound to a reference, to the referenced entry's page.
 - SEO on a collection page: `seo.fields` (`title`, `description`, `ogImage`) name the entry's fields. On any other page: `seo.entry` plus `seo.fields`.
-- `node.update` with `collection` points a list at another collection; rebind its fields in the same batch.
+- `node.update` with `collection` points a list at another collection; rebind its fields right after.
 
 ## Rules
 
@@ -44,4 +44,4 @@ A collection has fields; entries hold the content. People edit them in the edito
 
 ## Reference
 
-The server's `guide` tool is a reference for exact operation names, fields and JSON schemas: `guide` with the group `collection`, `field` or `entry` lists those schemas. The method and rules above come from this skill.
+Each change tool (`collection.create`, `field.add`, `entry.create` and the rest) declares its own fields; the server's `guide` tool has notes on the topic `content`. The method and rules above come from this skill.

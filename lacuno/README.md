@@ -1,8 +1,9 @@
 # Lacuno plugin
 
-Connects your AI app to Lacuno Cloud at `https://mcp.lacuno.io/mcp` and adds four skills: build a
-page, check your work, content (CMS) and forms. You sign in with your Lacuno account; the AI then
-works on the sites where you are an owner or editor, and names the site on each call.
+Connects your AI app to Lacuno Cloud at `https://mcp.lacuno.io/mcp` and adds five skills: build a
+page, check your work, content (CMS), forms, and variants and demos. You sign in with your Lacuno
+account; the AI then works on the workspaces and sites where you are an owner or editor, and names
+the site on each call.
 
 ## What changes a site
 
@@ -20,9 +21,10 @@ Read only, change nothing:
 | Tool | What it does |
 | --- | --- |
 | `sites.list` | Lists the sites you can work on, to choose one. |
-| `guide` | Reference: the basics, how-to topics and the exact schema of each operation. |
+| `workspaces.list` | Lists the workspaces you can work in, with their plan. |
+| `demos.list` | Lists a workspace's client demos with their links. |
+| `guide` | Notes: the basics and how-to topics. |
 | `document.read` | Reads a site's document: pages, styles, components, collections, assets. |
-| `document.diff` | Shows what a batch of operations would change, without applying it. |
 | `node.get` | Reads one element and the elements inside it. |
 | `entries.list` | Reads a collection's entries. |
 | `styles.get` | Reads classes and their styles. |
@@ -40,7 +42,11 @@ Change the site, but not what visitors see:
 
 | Tool | What it does |
 | --- | --- |
-| `document.apply` | Applies a batch of edits to the document, all or nothing. |
+| `node.create`, `style.set`, `page.update`, … | One tool per kind of change to the document, named like it: pages, elements, classes and styles, design tokens, components, collections and entries, languages. Each change is all or nothing; `dryRun` shows it without making it. The ones named `….delete` or `….remove` delete; the server refuses to delete what is still in use. |
+| `workspace.create` | Creates a workspace of yours. |
+| `site.create` | Creates a site in a workspace, from a template or as a copy of another site. |
+| `demo.save` | Creates or changes a client demo: a link that shows sites as versions to choose from. |
+| `demo.tour` | Writes the guided tour of a demo version. |
 | `translations.apply` | Writes translations into a language. |
 | `asset.import` | Adds an image, video or font to the site from a public web address. |
 | `asset.upload` | Adds a file from your machine to the site. |
@@ -58,6 +64,8 @@ Change what visitors see:
 - **lacuno-check-your-work**: checking a page's structure, text and looks at 1280 and 390 wide.
 - **lacuno-content**: collections, fields and entries, and showing them on pages.
 - **lacuno-forms**: forms whose messages are emailed to the site's owner.
+- **lacuno-variants-and-demos**: several versions of a site for a client, shown in one demo link.
 
-Each skill holds its own steps and rules. The `guide` tool is a reference for exact operation
-names, fields and parameters.
+Each skill holds its own steps and rules. Each tool declares its own fields; the `guide` tool has
+notes by topic for reference. Nothing in Lacuno's tools deletes a workspace, site or demo: that
+stays with you, in Lacuno.

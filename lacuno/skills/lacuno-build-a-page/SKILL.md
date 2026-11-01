@@ -16,9 +16,9 @@ A Lacuno site is one JSON document: pages, a tree of nodes, classes with styles,
 ## Method
 
 1. **Plan** in this order: design tokens, then classes, then nodes.
-2. **Apply in few big batches** with `document.apply`: one batch for tokens and classes, one per page or big section. Pass the revision you read as `expectedRevision`. A batch is all or nothing; the answer has the new revision, created ids and warnings. Use that revision for the next batch; do not read the whole document again after every batch. On a stale revision, read again and send again.
-3. **Give your own ids** (letters, digits, `-` and `_`); later operations in the same batch can use them. `node.create` takes nested children, so one operation makes a whole section.
-4. **Try big or risky batches first** with `dryRun: true` or `document.diff`.
+2. **Change with the tool of each change**, named like it: `designToken.create`, `class.create`, `style.set`, `page.create`, `node.create`, `node.update` and so on. Pass the revision you read as `expectedRevision`. Each change is all or nothing; the answer has the new revision, created ids and warnings. Use that revision for the next change; do not read the whole document again after every change. On a stale revision, read again and send again.
+3. **Build a section at a time, not an element at a time**: `node.create` takes nested children, so one call makes a whole section, and `page.create` takes the page's tree. Give your own ids (letters, digits, `-` and `_`) so later calls can use them without reading again.
+4. **Try a change you are unsure of first** with `dryRun: true`: it answers the patches without changing anything.
 5. **Check** the result as the lacuno-check-your-work skill describes, at 1280 and 390 wide, before saying the page is done.
 
 ## Rules
@@ -68,4 +68,4 @@ Motion is CSS on classes: `style.set` of these custom properties with raw values
 
 ## Reference
 
-The server's `guide` tool is a reference for exact operation names, fields and JSON schemas: `guide` with an operation group (for example `node`, `style`, `class`, `designToken`, `component`, `keyframes`) lists that group's schemas. The method and rules above come from this skill.
+Each change tool declares its own fields. The server's `guide` tool has notes by topic (build, looks, text, menu, motion and more) for reference. The method and rules above come from this skill.
