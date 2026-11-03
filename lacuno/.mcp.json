@@ -2,7 +2,7 @@
   "mcpServers": {
     "lacuno": {
       "type": "http",
-      "url": "https://mcp.lacuno.io/mcp"
+      "url": "https://mcp.lacuno.io/v2/mcp"
     }
   }
 }

@@ -1,6 +1,6 @@
 # Lacuno plugin
 
-Connects your AI app to Lacuno Cloud at `https://mcp.lacuno.io/mcp` and adds five skills: build a
+Connects your AI app to Lacuno Cloud at `https://mcp.lacuno.io/v2/mcp` and adds five skills: build a
 page, check your work, content (CMS), forms, and variants and demos. You sign in with your Lacuno
 account; the AI then works on the workspaces and sites where you are an owner or editor, and names
 the site on each call.

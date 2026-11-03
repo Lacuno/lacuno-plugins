@@ -22,13 +22,13 @@ claude plugin marketplace add Lacuno/lacuno-plugins
 claude plugin install lacuno@lacuno
 ```
 
-The plugin brings the Lacuno MCP server and four skills. Tell the person: restart Claude Code,
+The plugin brings the Lacuno MCP server and five skills. Tell the person: restart Claude Code,
 run `/mcp`, choose `lacuno` and sign in with their Lacuno account in the browser. Then step 6.
 
 If the plugin commands are not available, add the server alone and the skills separately:
 
 ```
-claude mcp add --transport http lacuno https://mcp.lacuno.io/mcp
+claude mcp add --transport http lacuno https://mcp.lacuno.io/v2/mcp
 npx -y skills add Lacuno/lacuno-plugins -y
 ```
 
@@ -44,19 +44,19 @@ Without plugins, add the server and the skills separately; the person then runs
 `codex mcp login lacuno`:
 
 ```
-codex mcp add lacuno --url https://mcp.lacuno.io/mcp
+codex mcp add lacuno --url https://mcp.lacuno.io/v2/mcp
 npx -y skills add Lacuno/lacuno-plugins -y
 ```
 
 ## 4. Other hosts with a shell
 
-Add the MCP server the way your host expects. Its address is `https://mcp.lacuno.io/mcp`,
+Add the MCP server the way your host expects. Its address is `https://mcp.lacuno.io/v2/mcp`,
 streamable HTTP with OAuth sign-in:
 
-- Cursor, in `.cursor/mcp.json`: `{"mcpServers":{"lacuno":{"url":"https://mcp.lacuno.io/mcp"}}}`
+- Cursor, in `.cursor/mcp.json`: `{"mcpServers":{"lacuno":{"url":"https://mcp.lacuno.io/v2/mcp"}}}`
 - VS Code, in `.vscode/mcp.json`:
-  `{"servers":{"lacuno":{"type":"http","url":"https://mcp.lacuno.io/mcp"}}}`
-- Gemini CLI: `gemini mcp add --transport http lacuno https://mcp.lacuno.io/mcp`
+  `{"servers":{"lacuno":{"type":"http","url":"https://mcp.lacuno.io/v2/mcp"}}}`
+- Gemini CLI: `gemini mcp add --transport http lacuno https://mcp.lacuno.io/v2/mcp`
 
 Then install the skills; the command detects your host:
 
@@ -74,10 +74,10 @@ directory and in ChatGPT's apps, they open the listing, press Connect and sign i
 tell them:
 
 - claude.ai and Claude Desktop: open
-  `https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Lacuno&connectorUrl=https%3A%2F%2Fmcp.lacuno.io%2Fmcp`,
+  `https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Lacuno&connectorUrl=https%3A%2F%2Fmcp.lacuno.io%2Fv2%2Fmcp`,
   which fills in the connector; confirm it and sign in. Claude Desktop takes the same connectors.
   By hand: in Customize → Connectors (claude.ai/customize/connectors) or Claude Desktop's
-  Settings → Connectors choose *Add custom connector*, paste `https://mcp.lacuno.io/mcp` and sign
+  Settings → Connectors choose *Add custom connector*, paste `https://mcp.lacuno.io/v2/mcp` and sign
   in. On Team and Enterprise an owner adds it under Organization settings → Connectors.
 - ChatGPT: turn on Settings → Security and login → Developer mode, then at chatgpt.com/plugins
   choose + and paste the address.

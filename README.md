@@ -7,10 +7,11 @@ This repository holds the Lacuno plugin for Claude (Claude Code, claude.ai, Clau
 for OpenAI (Codex, ChatGPT). It connects your app to Lacuno Cloud at one address,
 
 ```
-https://mcp.lacuno.io/mcp
+https://mcp.lacuno.io/v2/mcp
 ```
 
-and adds skills that help the AI work well with Lacuno. You sign in with your Lacuno account
+and adds skills that help the AI work well with Lacuno. Apps connected before November 2026 use
+`https://mcp.lacuno.io/mcp`, which keeps working. You sign in with your Lacuno account
 the first time the app connects; the AI can then reach every site where you are an owner or
 editor and names the site on each call.
 
@@ -38,11 +39,11 @@ Then run `/mcp` in a session, pick `lacuno` and sign in.
 
 **claude.ai and Claude Desktop**
 
-Open [this link](https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Lacuno&connectorUrl=https%3A%2F%2Fmcp.lacuno.io%2Fmcp),
+Open [this link](https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Lacuno&connectorUrl=https%3A%2F%2Fmcp.lacuno.io%2Fv2%2Fmcp),
 which fills in the connector on claude.ai; confirm it and sign in. Claude Desktop takes the same
 connectors. By hand: in Customize → Connectors (claude.ai/customize/connectors) or in Claude
 Desktop's Settings → Connectors, choose *Add custom connector* and paste
-`https://mcp.lacuno.io/mcp`. On Team and Enterprise, an owner adds it in Organization settings →
+`https://mcp.lacuno.io/v2/mcp`. On Team and Enterprise, an owner adds it in Organization settings →
 Connectors. Once Lacuno is listed in Anthropic's directory, you can add it there in one click,
 skills included.
 
@@ -57,7 +58,7 @@ Then open the plugin browser with `/plugins`, install Lacuno and sign in when as
 **ChatGPT**
 
 Turn on Settings → Security and login → Developer mode, then at chatgpt.com/plugins choose +
-and paste `https://mcp.lacuno.io/mcp`. Once Lacuno is listed in OpenAI's plugin directory,
+and paste `https://mcp.lacuno.io/v2/mcp`. Once Lacuno is listed in OpenAI's plugin directory,
 install it from the Plugins tab instead.
 
 **Self-hosted Lacuno**
