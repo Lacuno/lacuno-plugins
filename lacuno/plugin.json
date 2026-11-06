@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lacuno",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Design, build and publish websites in Lacuno: connects Lacuno Cloud and adds skills for building pages, checking your work, content, forms, and client variants and demos",
   "author": {
     "name": "Lacuno",
@@ -41,6 +41,64 @@
         "brandColor": "#7047EB",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find a site and read a page. The reviewer account (Review details) has a site called Sample Studio, made from Lacuno's Starter template: the pages Home, About and Blog, and a Posts collection. Read only.",
+              "prompt": "List my Lacuno sites and tell me what is on the home page of Sample Studio.",
+              "tools_triggered": "sites.list, page.outline, page.preview",
+              "expected_behavior": "Lists Sample Studio with its workspace and the role owner, then summarises the home page from its text, starting with its main heading (\"Your website. Your rules.\" until test case 3 changes it). Changes nothing."
+            },
+            {
+              "description": "Create a site and build its home page from a brief, then check it at desktop and phone width.",
+              "prompt": "Create a new blank Lacuno site called Sample Bakery and build its home page: the heading \"Fresh bread every morning\", a short intro, and three cards for Bread, Pastries and Coffee. Check it on desktop and on a phone.",
+              "tools_triggered": "workspaces.list, site.create, document.read, class.create, node.create, style.set, page.screenshot",
+              "expected_behavior": "A new site, Sample Bakery, appears in the reviewer's workspace in Lacuno. Its home page shows the heading, the intro and the three cards, side by side in a screenshot 1280 px wide and readable without sideways scrolling in one 390 px wide. Nothing is published."
+            },
+            {
+              "description": "Edit the text of an existing page and show it at phone width.",
+              "prompt": "On Sample Studio, change the home page heading \"Your website. Your rules.\" to \"Welcome to Sample Studio\", then show me the home page on a phone.",
+              "tools_triggered": "sites.list, page.preview, node.update, page.screenshot",
+              "expected_behavior": "The heading reads \"Welcome to Sample Studio\", as the Lacuno editor shows at once, and a screenshot of the home page 390 px wide shows it. Nothing else changes and nothing is published."
+            },
+            {
+              "description": "Add content to a collection: a post in Sample Studio's Posts collection, which the Blog page lists and an article page shows.",
+              "prompt": "Add a post to Sample Studio's blog. Title: Spring opening. Summary: Our new studio opens on 1 April. Body: Come by for coffee and a first look at the new rooms. We are open from 9 to 5. Link: https://lacuno.io",
+              "tools_triggered": "sites.list, document.read, entry.create, page.preview",
+              "expected_behavior": "A new entry, Spring opening, in the Posts collection, as the CMS in the Lacuno editor shows. The Blog page lists it, and its article page, /blog/spring-opening, shows the title and the body. Nothing is published."
+            },
+            {
+              "description": "Add a contact form whose messages are emailed to the site's owner, then publish the site, as the prompt asks.",
+              "prompt": "Add a contact form with name, email and message fields to the About page of Sample Studio, then publish the site and give me the link.",
+              "tools_triggered": "sites.list, page.outline, node.create, class.create, style.set, page.screenshot, site.publish",
+              "expected_behavior": "The About page gets a form with labelled Name, Email and Message fields and a submit button. site.publish answers the site's testing address on lacuno.site. There, sending the form shows a success message, and the message is emailed to the reviewer account's address."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Deleting a workspace or a site is not offered: that stays with the person, in Lacuno.",
+              "prompt": "Delete my Lacuno workspace and all of its sites.",
+              "expected_behavior": "Says it cannot delete a workspace or a site, which the person does in Lacuno itself. Deletes nothing, not even pages or elements."
+            },
+            {
+              "description": "Lacuno does not register domains.",
+              "prompt": "Register the domain sample-studio.com for me.",
+              "expected_behavior": "Says that Lacuno does not register domains, and that a domain the person already owns can be connected to a site in Lacuno. Changes nothing."
+            },
+            {
+              "description": "A general web design question that needs no Lacuno site.",
+              "prompt": "What is the difference between margin and padding in CSS?",
+              "expected_behavior": "Answers from general knowledge without calling Lacuno's tools."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "The plugin sells nothing and takes no payments."
+      },
+      "publication": {
+        "release_notes": "This version connects to https://mcp.lacuno.io/v2/mcp, where each kind of change is a tool of its own (node.create, style.set, entry.create and so on) in place of one tool for batches. New tools create workspaces and sites and make client demos with guided tours. Tools that replace or delete content are marked destructive."
       }
     }
   }
