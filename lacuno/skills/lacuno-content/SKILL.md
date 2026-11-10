@@ -10,7 +10,7 @@ A collection has fields; entries hold the content. People edit them in the edito
 ## Before you start
 
 1. Call `sites.list` and pass `site` on every later call (a self-hosted, per-site connection has neither).
-2. `document.read` lists the collections with `usedBy`; `entries.list` reads entries. Reuse a collection before making a similar one.
+2. `document.read` lists the collections with `usedBy`; `entries.list` reads entries, a long collection in pages with `limit` and `offset`. Reuse a collection before making a similar one.
 
 ## Method
 
@@ -30,6 +30,7 @@ A collection has fields; entries hold the content. People edit them in the edito
 
 - A `collection-list` node repeats its children once per entry. Its `query`: `filter` (`eq`, `ne`, `contains`, `in` on a field id), `sort`, `offset`, `limit`; `paginate: true` with a limit makes `<path>/page/2` and on.
 - A page with `collection` and `[slug]` in its path renders once per entry.
+- Lists are evaluated when the site is published: there is no "today", and filters do not compare dates.
 - Inside those, bind `{"type":"field","field":"<fieldId>"}`. Anywhere else, name the entry: `{"type":"field","entry":"<entryId>","field":"<fieldId>"}`.
 - A rich text field binds on a text tagged `div`. A field inside a text's own rich text: `{"type":"field","attrs":{"field":"<fieldId>","format":"long"}}`.
 - Dates take `format` long, medium, numeric, short or full, and an optional `locale`.
@@ -44,4 +45,4 @@ A collection has fields; entries hold the content. People edit them in the edito
 
 ## Reference
 
-Each change tool (`collection.create`, `field.add`, `entry.create` and the rest) declares its own fields; the server's `guide` tool has notes on the topic `content`. The method and rules above come from this skill.
+Each change tool (`collection.create`, `field.add`, `entry.create` and the rest) declares its own fields. The method and rules above come from this skill.

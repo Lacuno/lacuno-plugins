@@ -11,7 +11,7 @@ A form is plain nodes. Once published, each message is emailed to the workspace 
 
 1. Call `sites.list` and pass `site` on every later call (a self-hosted, per-site connection has neither). Read the page with `document.read` or `page.outline` to find where the form goes.
 2. Build the whole form as **one** change of `node.create` with nested children, passing the revision you read:
-   - A `form` element without an `action`. `data-lacuno-form` is its name in the email ("Contact form" by default). `data-success` is the text shown after sending.
+   - A `form` element without an `action`. `data-lacuno-form` is its name in the email ("Contact form" by default). `data-success` and `data-error` are the texts shown after sending and when sending fails, in the page's language.
    - Each field: a `label` element holding a text (the label) and the control: an `input` (`name`; `type` text, email, tel, number, url, date or checkbox; `placeholder`; `required`), a `textarea`, or a `select` with text children tagged `option`.
    - Every control needs a `name`. Include an email field so the owner can reply.
    - Last: a text node tagged `button` with `type` submit.
@@ -26,4 +26,4 @@ A form is plain nodes. Once published, each message is emailed to the workspace 
 
 ## Reference
 
-`node.create` declares its own fields; the server's `guide` tool has notes on the topic `forms`. The method and rules above come from this skill.
+`node.create` declares its own fields. The method and rules above come from this skill.

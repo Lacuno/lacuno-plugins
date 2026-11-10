@@ -73,12 +73,16 @@ in this repository work with those addresses too.
 | --- | --- |
 | `lacuno-build-a-page` | Builds or redesigns pages from a brief, a mockup or a screenshot, a section at a time |
 | `lacuno-check-your-work` | Checks the result with the page outline, the page's text and screenshots where available |
+| `lacuno-components` | Makes reusable components with props and slots and places their instances |
 | `lacuno-content` | Sets up CMS collections and entries and shows them on pages |
 | `lacuno-forms` | Adds contact and other forms whose messages are emailed to the site owner |
+| `lacuno-motion` | Adds entrances, motion that follows the scroll, scroll stories and custom keyframes |
+| `lacuno-site-settings` | Sets titles, descriptions and other SEO, the 404 page, redirects and head code |
+| `lacuno-translate` | Adds a language and translates the site into it, with a glossary and a tone |
 | `lacuno-variants-and-demos` | Makes several versions of a site for a client and one demo link to choose from |
 
 Each skill holds its own steps and rules. Each of the Lacuno server's tools declares its own
-fields, so those always match the version you are connected to; its `guide` tool has notes by topic. The
+fields, so those always match the version you are connected to. The
 plugin folder's [README](lacuno/README.md) lists the server's tools and which of them change a site.
 
 ## Layout

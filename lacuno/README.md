@@ -1,8 +1,8 @@
 # Lacuno plugin
 
-Connects your AI app to Lacuno Cloud at `https://mcp.lacuno.io/v2/mcp` and adds five skills: build a
-page, check your work, content (CMS), forms, and variants and demos. You sign in with your Lacuno
-account; the AI then works on the workspaces and sites where you are an owner or editor, and names
+Connects your AI app to Lacuno Cloud at `https://mcp.lacuno.io/v2/mcp` and adds nine skills: build a
+page, check your work, components, content (CMS), forms, motion, site settings, translate, and
+variants and demos. You sign in with your Lacuno account; the AI then works on the workspaces and sites where you are an owner or editor, and names
 the site on each call.
 
 ## What changes a site
@@ -23,7 +23,6 @@ Read only, change nothing:
 | `sites.list` | Lists the sites you can work on, to choose one. |
 | `workspaces.list` | Lists the workspaces you can work in, with their plan. |
 | `demos.list` | Lists a workspace's client demos with their links. |
-| `guide` | Notes: the basics and how-to topics. |
 | `document.read` | Reads a site's document: pages, styles, components, collections, assets. |
 | `node.get` | Reads one element and the elements inside it. |
 | `entries.list` | Reads a collection's entries. |
@@ -50,7 +49,6 @@ Change the site, but not what visitors see:
 | `translations.apply` | Writes translations into a language. |
 | `asset.import` | Adds an image, video or font to the site from a public web address. |
 | `asset.upload` | Adds a file from your machine to the site. |
-| `site.build` | Builds the site's static output, without publishing it. |
 
 Change what visitors see:
 
@@ -60,12 +58,16 @@ Change what visitors see:
 
 ## Skills
 
-- **lacuno-build-a-page**: building and restyling pages, sections, navigation and motion.
+- **lacuno-build-a-page**: building and restyling pages, sections and navigation.
 - **lacuno-check-your-work**: checking a page's structure, text and looks at 1280 and 390 wide.
+- **lacuno-components**: reusable components with props and slots, and their instances.
 - **lacuno-content**: collections, fields and entries, and showing them on pages.
 - **lacuno-forms**: forms whose messages are emailed to the site's owner.
+- **lacuno-motion**: entrances, motion that follows the scroll, scroll stories and custom keyframes.
+- **lacuno-site-settings**: titles, descriptions and other SEO, the 404 page, redirects, head code.
+- **lacuno-translate**: adding a language and translating a site into it, with a glossary and a tone.
 - **lacuno-variants-and-demos**: several versions of a site for a client, shown in one demo link.
 
-Each skill holds its own steps and rules. Each tool declares its own fields; the `guide` tool has
-notes by topic for reference. Nothing in Lacuno's tools deletes a workspace, site or demo: that
+Each skill holds its own steps and rules, and each tool declares its own fields: the server has no
+tool that hands out instructions. Nothing in Lacuno's tools deletes a workspace, site or demo: that
 stays with you, in Lacuno.

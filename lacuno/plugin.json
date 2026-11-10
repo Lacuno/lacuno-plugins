@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lacuno",
-  "version": "0.4.1",
-  "description": "Design, build and publish websites in Lacuno: connects Lacuno Cloud and adds skills for building pages, checking your work, content, forms, and client variants and demos",
+  "version": "0.5.0",
+  "description": "Design, build and publish websites in Lacuno: connects Lacuno Cloud and adds skills for building pages and components, checking your work, content, forms, motion, translation, site settings, and client variants and demos",
   "author": {
     "name": "Lacuno",
     "url": "https://lacuno.io"
@@ -98,7 +98,7 @@
         "commerce_description": "The plugin sells nothing and takes no payments."
       },
       "publication": {
-        "release_notes": "This version connects to https://mcp.lacuno.io/v2/mcp, where each kind of change is a tool of its own (node.create, style.set, entry.create and so on) in place of one tool for batches. New tools create workspaces and sites and make client demos with guided tours. Tools that replace or delete content are marked destructive."
+        "release_notes": "Four new skills: components, motion, translating a site, and site settings and SEO. The skills and each tool's own description now hold everything on how to work with Lacuno, so the server's guide tool is gone. asset.import takes a web address or inline data, entries.list pages through long collections, node.get takes a depth, translation.delete takes a translation back, and every tool has a title."
       }
     }
   }

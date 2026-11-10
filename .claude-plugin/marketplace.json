@@ -9,7 +9,7 @@
     {
       "name": "lacuno",
       "source": "./lacuno",
-      "description": "Connects Lacuno Cloud and adds skills for building pages, checking your work, content, forms, and client variants and demos",
+      "description": "Connects Lacuno Cloud and adds skills for building pages and components, checking your work, content, forms, motion, translation, site settings, and client variants and demos",
       "category": "design"
     }
   ]

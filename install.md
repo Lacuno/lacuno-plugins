@@ -22,7 +22,7 @@ claude plugin marketplace add Lacuno/lacuno-plugins
 claude plugin install lacuno@lacuno
 ```
 
-The plugin brings the Lacuno MCP server and five skills. Tell the person: restart Claude Code,
+The plugin brings the Lacuno MCP server and nine skills. Tell the person: restart Claude Code,
 run `/mcp`, choose `lacuno` and sign in with their Lacuno account in the browser. Then step 6.
 
 If the plugin commands are not available, add the server alone and the skills separately:
@@ -86,8 +86,8 @@ Then step 6.
 
 ## 6. Check
 
-Call the Lacuno server's `guide` tool. If it answers, you are connected: call `sites.list` and
-remember the sites. If the host says the server needs sign-in, hand the person the link it shows
+Call the Lacuno server's `sites.list` tool. If it answers, you are connected: remember the
+sites. If the host says the server needs sign-in, hand the person the link it shows
 and wait; do not retry on your own. An empty site list means the person has no site yet: they
 create one at https://app.lacuno.io.
 
@@ -95,5 +95,6 @@ create one at https://app.lacuno.io.
 
 Say: "Lacuno is connected. I can build and edit your sites: pages, text, images, styles, content
 collections and forms, and publish when you ask. Which site shall we work on?" Then wait for the
-person. The skills say how to build pages, work with content and forms,
-make versions and demos for a client, and check your work; the `guide` tool has notes by topic.
+person. The skills say how to build pages and components, work with content and forms, add
+motion, translate a site, change its settings, make versions and demos for a client, and check
+your work.
