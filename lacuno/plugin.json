@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lacuno",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Design, build and publish websites in Lacuno: connects Lacuno Cloud and adds skills for building pages and components, checking your work, content, forms, motion, translation, site settings, and client variants and demos",
   "author": {
     "name": "Lacuno",
@@ -98,7 +98,7 @@
         "commerce_description": "The plugin sells nothing and takes no payments."
       },
       "publication": {
-        "release_notes": "Four new skills: components, motion, translating a site, and site settings and SEO. The skills and each tool's own description now hold everything on how to work with Lacuno, so the server's guide tool is gone. asset.import takes a web address or inline data, entries.list pages through long collections, node.get takes a depth, translation.delete takes a translation back, and every tool has a title."
+        "release_notes": "Four new skills: components, motion, translating a site, and site settings and SEO. The skills and each tool's own description now hold everything on how to work with Lacuno, so the server's guide tool is gone. asset.import takes a web address or inline data, entries.list pages through long collections, node.get takes a depth, translation.delete takes a translation back, and every tool has a title. A demo's colour themes are now the site's own, made with mode.create and designToken.setValue, so demo.save takes no presets."
       }
     }
   }
